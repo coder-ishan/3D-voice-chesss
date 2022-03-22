@@ -90,7 +90,7 @@ public class Board : MonoBehaviour
 
     public void SelectPiece(Piece piece)
     {
-       // chessController.RemoveMovesEnablingAttakOnPieceOfType<King>(piece);
+       //chessController.RemoveMovesEnablingAttakOnPieceOfType<King>(piece);
         selectedPiece = piece;
         Debug.Log("select piece");
         List<Vector2Int> selection = selectedPiece.avaliableMoves;
@@ -109,17 +109,17 @@ public class Board : MonoBehaviour
             bool isSquareFree = GetPieceOnSquare(selection[i]) == null;
             squaresData.Add(position, isSquareFree);
         }
-        //squareSelector.ShowSelection(squaresData);
+       squareSelector.ShowSelection(squaresData);
     }
 
     private void DeselectPiece()
     {
         selectedPiece = null;
-       //squareSelector.ClearSelection();
+       squareSelector.ClearSelection();
     }
-    private void OnSelectedPieceMoved(Vector2Int coords, Piece piece)
+    public void OnSelectedPieceMoved(Vector2Int coords, Piece piece)
     {
-       // TryToTakeOppositePiece(coords);
+        TryToTakeOppositePiece(coords);
         UpdateBoardOnPieceMove(coords, piece.occupiedSquare, piece, null);
         selectedPiece.MovePiece(coords);
         Debug.Log("OnSelectedPieceMoved");
@@ -172,36 +172,36 @@ public class Board : MonoBehaviour
             grid[coords.x, coords.y] = piece;
     }
 
-   // private void TryToTakeOppositePiece(Vector2Int coords)
-    //{
-     //   Piece piece = GetPieceOnSquare(coords);
-      //  if (piece && !selectedPiece.IsFromSameTeam(piece))
-     //   {
-      //      TakePiece(piece);
-      //  }
-   // }
+   private void TryToTakeOppositePiece(Vector2Int coords)
+    {
+        Piece piece = GetPieceOnSquare(coords);
+        if (piece && !selectedPiece.IsFromSameTeam(piece))
+       {
+           TakePiece(piece);
+       }
+    }
 
-    //private void TakePiece(Piece piece)
-   // {
-      //  if (piece)
-       // {
-        //    grid[piece.occupiedSquare.x, piece.occupiedSquare.y] = null;
-        //   // chessController.OnPieceRemoved(piece);
-        //    Destroy(piece.gameObject);
-       // }
-   // }
+    private void TakePiece(Piece piece)
+   {
+        if (piece)
+     {
+          grid[piece.occupiedSquare.x, piece.occupiedSquare.y] = null;
+            //chessController.OnPieceRemoved(piece);
+         Destroy(piece.gameObject);
+       }
+}
 
 
-    //public void PromotePiece(Piece piece)
-  //  {
-    //    TakePiece(piece);
-    //    chessController.CreatePieceAndInitialize(piece.occupiedSquare, piece.team, typeof(Queen));
-   // }
+    public void PromotePiece(Piece piece)
+    {
+        TakePiece(piece);
+       //chessController.CreatePieceAndInitialize(piece.occupiedSquare, piece.team, typeof(Queen));
+    }
 
-    //internal void OnGameRestarted()
-    //{
-   //     selectedPiece = null;
-    //    CreateGrid();
-    //}
+    internal void OnGameRestarted()
+    {
+       selectedPiece = null;
+        CreateGrid();
+  }
 
 }

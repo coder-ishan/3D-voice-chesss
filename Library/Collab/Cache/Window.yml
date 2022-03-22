@@ -14,9 +14,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SimpleSelectedItems:
     m_Keys:
+    - Assets/Materials/FreeSquareMaterial.mat
+    - Assets/Materials/FreeSquareMaterial.mat.meta
+    - Assets/Materials/OpponentSquareMaterial.mat
+    - Assets/Materials/OpponentSquareMaterial.mat.meta
+    - Assets/Prefabs/Bishop.prefab
+    - Assets/Prefabs/King.prefab
+    - Assets/Prefabs/Knight.prefab
+    - Assets/Prefabs/Pawn.prefab
+    - Assets/Prefabs/Queen.prefab
+    - Assets/Prefabs/Rook.prefab
+    - Assets/Prefabs/Selector.prefab
+    - Assets/Prefabs/Selector.prefab.meta
+    - Assets/Scenes/SampleScene.unity
+    - Assets/Scripts/Board.cs
+    - Assets/Scripts/ChessGameController.cs.meta
+    - Assets/Scripts/ChessPlayer.cs
+    - Assets/Scripts/Input System/BoardInputHandler.cs
+    - Assets/Scripts/Input System/ColliderInputReciever.cs
+    - Assets/Scripts/Input System/IInputHandler.cs
+    - Assets/Scripts/Input System/InputReciever.cs
+    - Assets/Scripts/Piece.cs
+    - Assets/Scripts/Pieces/Rook.cs
+    - Assets/Scripts/SquareSelectorCreator.cs
+    - Assets/Scripts/Tweeners/InstantTweener.cs
     - 
-    m_Values: 01
-  RevisionSummary: scripts of players written
+    m_Values: 00000000000000000000000000000000000000000000000000
+  RevisionSummary: 
   ChangesSearchValue: 
   SelectedHistoryRevision: 
   HistoryPageNumber: 0
