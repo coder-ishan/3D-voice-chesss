@@ -15,11 +15,12 @@ public class Rook : Piece
             for (int i = 1; i <= range; i++)
             {
                 Vector2Int nextCoords = occupiedSquare + direction * i;
-                Piece piece = board.GetPieceOnSquare(nextCoords);
+                Piece piece = board.GetPieceOnSquare(nextCoords);//we chech if any piece is on that square
+
                 if (!board.CheckIfCoordinatesAreOnBoard(nextCoords))
                     break;
                 if (piece == null)
-                    TryToAddMove(nextCoords);
+                    TryToAddMove(nextCoords);//add to availiable moves list
                 else if (!piece.IsFromSameTeam(this))
                 {
                     TryToAddMove(nextCoords);

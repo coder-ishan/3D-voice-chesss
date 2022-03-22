@@ -3,7 +3,9 @@ guid: effc8f7d6671f8d4c8a02f8cad7b4805
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - startingBoardLayout: {fileID: 11400000, guid: 12f763b605210d94fbc4bdebb84a36c7, type: 2}
+  - board: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

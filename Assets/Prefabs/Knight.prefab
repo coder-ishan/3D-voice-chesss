@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 37905147694401470}
   - component: {fileID: 8994908431933718594}
   - component: {fileID: 91368447857835674}
+  - component: {fileID: 1652348373777857521}
   m_Layer: 0
   m_Name: Knight
   m_TagString: Untagged
@@ -123,3 +124,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   materialSetter: {fileID: 0}
   avaliableMoves: []
+--- !u!65 &1652348373777857521
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 107724}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0526323, y: 2.304227, z: 1.0904684}
+  m_Center: {x: 0.016363293, y: 0.9798824, z: 0}

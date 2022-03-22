@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class ChessPlayer 
 {
     public TeamColor team { get; set; }
@@ -34,6 +35,7 @@ public class ChessPlayer
         {
             if (board.HasPiece(piece))
                 piece.SelectAvaliableSquares();
+            Debug.Log("GenerateAllPossibleMoves");
         }
     }
 }

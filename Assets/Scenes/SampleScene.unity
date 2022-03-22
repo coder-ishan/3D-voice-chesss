@@ -323,13 +323,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.3936278, y: 0.0010254909, z: 0.019855825, w: 0.91905487}
-  m_LocalPosition: {x: -3, y: 14.4, z: -12.7}
+  m_LocalRotation: {x: 0.6488398, y: 0.008243282, z: -0.027416376, w: 0.76038635}
+  m_LocalPosition: {x: -6.08, y: 15.82, z: -5.63}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 46.343, y: 1.454, z: 3.098}
+  m_LocalEulerAnglesHint: {x: 80.819, y: -8.303, z: -11.202}
 --- !u!1 &1090491455
 GameObject:
   m_ObjectHideFlags: 0
@@ -421,11 +421,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1222570343}
-  - component: {fileID: 1222570345}
   - component: {fileID: 1222570344}
   - component: {fileID: 1222570346}
   - component: {fileID: 1222570348}
   - component: {fileID: 1222570347}
+  - component: {fileID: 1222570345}
   m_Layer: 0
   m_Name: Board
   m_TagString: Untagged
@@ -474,6 +474,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce254d40fe0b7f94c99a8c174ecaa254, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  freeSquareMaterial: {fileID: 2100000, guid: b3e0bc0322b2299479a80af544301c15, type: 2}
+  enemySquareMaterial: {fileID: 2100000, guid: e275ec800ecd4ef4fa00050a0c95f41c, type: 2}
+  selectorPrefab: {fileID: 1332680261076535, guid: 65672744554549e4ea5ad8287c5e0642, type: 3}
 --- !u!65 &1222570346
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -485,8 +488,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 14.2127695, y: 0, z: 12.342002}
+  m_Center: {x: -0.18681192, y: 0, z: -0.21000624}
 --- !u!114 &1222570347
 MonoBehaviour:
   m_ObjectHideFlags: 0

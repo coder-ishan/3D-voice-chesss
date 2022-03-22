@@ -49,32 +49,55 @@ public class Board : MonoBehaviour
 
     public void OnSquareSelected(Vector3 inputPosition) 
     {
+       
         Vector2Int coords = CalculateCoordsFromPosition(inputPosition);
+        Debug.Log("onSquare Selected 1");
         Piece piece = GetPieceOnSquare(coords);
+        Debug.Log(coords);
+
         if (selectedPiece)
         {
             if (piece != null && selectedPiece == piece)
-                DeselectPiece();
+            {
+             DeselectPiece();
+                Debug.Log("onSquare Selected 2 ");
+            }
             else if (piece != null && selectedPiece != piece && chessController.IsTeamTurnActive(piece.team))
+            {
                 SelectPiece(piece);
+                Debug.Log("onSquare Selected 3");
+
+            }
             else if (selectedPiece.CanMoveTo(coords))
+            {
                 OnSelectedPieceMoved(coords, selectedPiece);
+                Debug.Log("onSquareSelected 4");
+            }
+            else
+            {
+                Debug.Log("onSquare Selected 5");
+            }
         }
         else
         {
             if (piece != null && chessController.IsTeamTurnActive(piece.team))
                 SelectPiece(piece);
+            Debug.Log(piece);
         }
     }
 
 
 
-    private void SelectPiece(Piece piece)
+    public void SelectPiece(Piece piece)
     {
        // chessController.RemoveMovesEnablingAttakOnPieceOfType<King>(piece);
         selectedPiece = piece;
+        Debug.Log("select piece");
         List<Vector2Int> selection = selectedPiece.avaliableMoves;
+        Debug.Log("piece");
         ShowSelectionSquares(selection);
+
+        Debug.Log("SelectPiece");
     }
 
     private void ShowSelectionSquares(List<Vector2Int> selection)
@@ -86,19 +109,20 @@ public class Board : MonoBehaviour
             bool isSquareFree = GetPieceOnSquare(selection[i]) == null;
             squaresData.Add(position, isSquareFree);
         }
-       // squareSelector.ShowSelection(squaresData);
+        //squareSelector.ShowSelection(squaresData);
     }
 
     private void DeselectPiece()
     {
         selectedPiece = null;
-        //squareSelector.ClearSelection();
+       //squareSelector.ClearSelection();
     }
     private void OnSelectedPieceMoved(Vector2Int coords, Piece piece)
     {
        // TryToTakeOppositePiece(coords);
         UpdateBoardOnPieceMove(coords, piece.occupiedSquare, piece, null);
         selectedPiece.MovePiece(coords);
+        Debug.Log("OnSelectedPieceMoved");
         DeselectPiece();
         EndTurn();
     }
@@ -112,6 +136,7 @@ public class Board : MonoBehaviour
     {
         grid[oldCoords.x, oldCoords.y] = oldPiece;
         grid[newCoords.x, newCoords.y] = newPiece;
+        Debug.Log("UpdateBoardOnPieceMove");
     }
 
     public Piece GetPieceOnSquare(Vector2Int coords)
