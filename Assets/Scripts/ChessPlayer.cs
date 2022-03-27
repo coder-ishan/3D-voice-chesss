@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -37,5 +38,10 @@ public class ChessPlayer
                 piece.SelectAvaliableSquares();
             Debug.Log("GenerateAllPossibleMoves");
         }
+    }
+
+    internal void RemoveMovesEnablingAttakOnPieceOfType<T>(ChessPlayer activePlayer, Piece attackedKing)
+    {
+        throw new NotImplementedException();
     }
 }

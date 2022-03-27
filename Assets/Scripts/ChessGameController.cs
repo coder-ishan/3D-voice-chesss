@@ -101,4 +101,5 @@ public class ChessGameController : MonoBehaviour
     {
         return player == whitePlayer ? blackPlayer : whitePlayer;
     }
+
 }

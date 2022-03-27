@@ -78,6 +78,14 @@
     <Compile Include="Assets\Scripts\UIButton.cs" />
     <Compile Include="Assets\Scripts\Tweeners\InstantTweener.cs" />
     <Compile Include="Assets\Scripts\Pieces\Knight.cs" />
+    <Compile Include="Assets\Scripts\Voice command\B.cs" />
+    <Compile Include="Assets\Scripts\Voice command\A.cs" />
+    <Compile Include="Assets\Scripts\Voice command\D.cs" />
+    <Compile Include="Assets\Scripts\Voice command\E.cs" />
+    <Compile Include="Assets\Scripts\Voice command\F.cs" />
+    <Compile Include="Assets\Scripts\Voice command\G.cs" />
+    <Compile Include="Assets\Scripts\Voice command\H.cs" />
+    <Compile Include="Assets\Scripts\Voice command\C.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

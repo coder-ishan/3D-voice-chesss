@@ -18,4 +18,5 @@ public class BoardInputHandler : MonoBehaviour,IInputHandler
         board.OnSquareSelected(inputPosition);
         Debug.Log("input pos"+ inputPosition);
     }
+
 }
